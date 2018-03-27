@@ -1,0 +1,38 @@
+## Basic Configuration
+baseurl = "https://cczhong11.github.io/"
+languageCode = "en"
+canonifyurls = "true"
+theme = "hyde-hyde"
+
+## Hugo Built-in Features
+# disqusShortname = ""
+# googleAnalytics = ""
+# enableRobotsTXT = true
+
+## Site Settings
+[params]
+    author = "Tianchen Zhong"
+    title = "TC blog"
+    description = "I am who I am. Love Cloud and Data science"
+    #authorimage = "/img/kirby.png"
+    dateformat = "Jan 1, 2006"
+    highlightjs = true
+    highlightjsstyle = "github"
+
+## Social Accounts
+[params.social]
+    github = "https://github.com/cczhong11"
+    linkedin = "https://www.linkedin.com/in/tianchen-zhong/"
+    email = "tczhong24@gmail.com"
+
+## Main Menu
+[[menu.main]]
+    name = "Posts"
+    weight = 100
+    identifier = "posts"
+    url = "/posts/"
+[[menu.main]]
+    name = "About"
+    identifier = "about"
+    weight = 200
+    url = "/about/"
