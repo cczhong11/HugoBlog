@@ -14,17 +14,17 @@ theme = "hyde-hyde"
     author = "Tianchen Zhong"
     title = "TC blog"
     description = "I am who I am. Love Cloud and Data science"
-    #authorimage = "/img/kirby.png"
+    authorimage = "/img/kirby.png"
     dateformat = "Jan 1, 2006"
     highlightjs = true
-    highlightjsstyle = "github"
+    highlightjsstyle = "vs"
 
 ## Social Accounts
 [params.social]
-    github = "https://github.com/cczhong11"
-    linkedin = "https://www.linkedin.com/in/tianchen-zhong/"
+    github = "cczhong11"
+    linkedin = "tianchen-zhong"
     email = "tczhong24@gmail.com"
-
+    
 ## Main Menu
 [[menu.main]]
     name = "Posts"
