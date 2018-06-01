@@ -11,7 +11,7 @@ theme = "hyde-hyde"
 
 ## Site Settings
 [params]
-    author = "Tianchen Zhong"
+    author = "Tc Zhong"
     title = "TC blog"
     description = "I am who I am. Love Cloud and Data science"
     authorimage = "/img/kirby.png"
