@@ -7,7 +7,7 @@ theme = "hyde-hyde"
 ## Hugo Built-in Features
 # disqusShortname = ""
 # googleAnalytics = ""
-# enableRobotsTXT = true
+enableRobotsTXT = true
 
 ## Site Settings
 [params]
@@ -36,3 +36,9 @@ theme = "hyde-hyde"
     identifier = "about"
     weight = 200
     url = "/about/"
+
+[[menu.main]]
+    name = "My Resume"
+    identifier = "Resume"
+    weight = 301
+    url = "/tianchen_zhong.pdf"   

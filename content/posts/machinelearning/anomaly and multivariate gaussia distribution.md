@@ -10,14 +10,16 @@ categories:
 
 
 # What is Anomaly
+
 In supervised view, we could think these points are with some labels. In unsupervised view, there are outliers, which means they have very low probability.
 
 When we could model a dataset with a distribution, we could find which point's probability is very low, then we could think them as a outlier.
 
 # Multivariate Gaussian distribution
-$$P(x) = \frac{1}{\Sigma \sqrt {2\pi}} e^{-({x - \mu } )^2/{2\Sigma ^2 } }$$
 
-In this distribution, we could prove $E[X] = \mu$, $Cov[X]= \Sigma$
+$$P(x) = \frac{1}{\Sigma \sqrt {2\pi}} e^{-({x - \mu } )^2/{2\Sigma ^2}}$$
+
+In this distribution, we could prove $E[X] = \mu$, $Cov[X]=\Sigma$
 
 For $x_i$ in $X$, if $p(x_i)=\mathcal{N} (x;0,1)$, then if $y=Ax+b$, we could also know $y~\mathcal{N}(AA^T)$
 
