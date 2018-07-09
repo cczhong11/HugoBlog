@@ -32,13 +32,17 @@ enableRobotsTXT = true
     identifier = "posts"
     url = "/posts/"
 [[menu.main]]
+    name = "Project"
+    identifier = "Project"
+    weight = 301
+    url = "/project/"  
+[[menu.main]]
     name = "About"
     identifier = "about"
     weight = 200
     url = "/about/"
-
 [[menu.main]]
     name = "My Resume"
     identifier = "Resume"
     weight = 301
-    url = "/tianchen_zhong.pdf"   
+    url = "/tianchen_zhong.pdf"  

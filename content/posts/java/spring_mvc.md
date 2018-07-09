@@ -5,8 +5,8 @@ description: "This blog will introduce the basic idea for MVC and how to use Spr
 categories:
     - "Java"
     - "Cloud computing"
-	- "Spring"
-	- "MVC"
+    - "Spring"
+    - "MVC"
 ---
 
 # Spring boot Framework
