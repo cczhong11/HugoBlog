@@ -12,7 +12,7 @@ categories:
 
 It is popular for students to practise their coding skills on leetcode.com. It offers very good questions and good articles. However, it is not easy for people to learn from other good answers. Although it provides discussion, but people needs to go through threads by threads to find the right answers. I want to build a website **for myself** to find questions easily. 
 
-**All codes are belong to Leetcode.com, it is not a good idea to redistibute them**. I totally agree with LeetCode terms of service.
+**All codes are belong to Leetcode.com, it is not a good idea to redistribute  them**. I totally agree with LeetCode terms of service.
 
 > "Content" means all software, communications, images, sounds, and material perceived or made available from the Applications. Unless otherwise specified in writing, all of our content is owned, controlled, or licensed by us. Content means all software, images, questions, solutions, or any material associated with the service and website. All content is copyrighted under United States copyright laws and/or similar laws of other jurisdictions, protecting it from unauthorized use.
 
@@ -28,7 +28,7 @@ Thanks to the cloud platform and open source technology, we could build a websit
 - Google Cloud Platform Function services
 - Google Cloud Platform Datastore
 
-![](leetcodeanswer.png)
+![](../leetcodeanswer.png)
 
 Domain costs me $12 per year. The github pages and ReactJS are free. GCP Function is charged the times it executed, $0.40/million. For Datastore, it is free for 1GB and daily read and write under 50000 and 20000. Therefore, it almost cost me nothing. 
 
@@ -51,5 +51,43 @@ It is also possible to only have one table and write good query sentence. The re
 
 ## Functions
 
-In this part, I used JavaScript to query the datastore. In the beginning, I searched a lot about how to connect 
+In this part, I used JavaScript to query the datastore. In the beginning, I searched a lot about how to connect the datastore from the function, but there is no stackoverflow thread about this. One reason is the number of GCP users is not as high as Azure and AWS, thus lots of problem nobody knows. 
 
+However, it is easier than what I thought. In the first step, I tested all my code locally with Nodejs and make sure it could work to query the right document I want. Then I just needed to add `"@google-cloud/datastore": "^1.4.1"` in the `package.json`. And then I could write function to query the result. 
+
+```javascript
+function getdata(parameter,cb){
+    const query =
+    ds.createQuery(type).filter('__key__', '=', ds.key([type, name]));
+    var rs="";
+    ds.runQuery(query)
+    .then(results => {
+       const t = results[0];
+       data = t[0]
+       cb(data);
+    })
+    .catch(err => {
+       cb('ERROR:'+err);
+    });
+}
+exports.helloWorld = (req, res) => {
+    if(condition){
+          getdata(parameter,function(d){
+            res.status(200).json({"data":d}).end();
+          });
+      }}
+}
+```
+
+Here I used callback to send data to request. Because here it is a promise and you could not get data without a callback. Therefore I learnt callback and wrote the async code. I also designed a RESTful Api to let the front end could send request to query the data. 
+
+
+## Front End
+
+In the front end, I used ReactJS and github pages. The tutorial to do this could find [here](https://codeburst.io/deploy-react-to-github-pages-to-create-an-amazing-website-42d8b09cd4d). 
+
+I just create a very easy web page and allow users to query the data save in the datastore.
+
+# Conclusion
+
+Nowadays, we could get lots of free resource from the Internet. We could utilize them and make something could influence people's life. 

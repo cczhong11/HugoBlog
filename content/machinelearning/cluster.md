@@ -2,8 +2,8 @@
 title: "Clustering"
 date: "2018-05-01"
 description: "This blog tells you do cluster"
-categories:
-    - "Machine learning"
+categories: 
+- "Machine learning"
 ---
 
 

@@ -1,12 +1,12 @@
 ## Basic Configuration
-baseurl = "https://cczhong11.github.io/"
+baseurl = "http://www.tczhong.com/"
 languageCode = "en"
 canonifyurls = "true"
 theme = "hyde-hyde"
-
+title = "TC blog"
 ## Hugo Built-in Features
-# disqusShortname = ""
-# googleAnalytics = ""
+disqusShortname = "tczhong"
+googleAnalytics = ""
 enableRobotsTXT = true
 
 ## Site Settings
@@ -14,17 +14,17 @@ enableRobotsTXT = true
     author = "Tc Zhong"
     title = "TC blog"
     description = "I am who I am. Love Cloud and Data science"
-    authorimage = "/img/kirby.png"
+    authorimage = "https://avatars2.githubusercontent.com/u/7358252?s=460&v=4"
     dateformat = "Jan 1, 2006"
     highlightjs = true
     highlightjsstyle = "vs"
-
+    paginate = 10
 ## Social Accounts
 [params.social]
     github = "cczhong11"
     linkedin = "tianchen-zhong"
     email = "tczhong24@gmail.com"
-    
+    stackoverflow="7112540"
 ## Main Menu
 [[menu.main]]
     name = "Posts"
@@ -35,12 +35,12 @@ enableRobotsTXT = true
     name = "Project"
     identifier = "Project"
     weight = 301
-    url = "/project/"  
+    url = "/posts/project/index.html"  
 [[menu.main]]
     name = "About"
     identifier = "about"
     weight = 200
-    url = "/about/"
+    url = "/about/hello"
 [[menu.main]]
     name = "My Resume"
     identifier = "Resume"

@@ -7,6 +7,7 @@ categories:
 ---
 
 # Maximum likelihood estimation
+
 In the beginning, we could get a sample set $x_1,x_2,...$, and we assume these points are independent with each other. Then we could get the possibility for us to get these points.
 $p(x_1,x_2,x_3...,x_m;\theta) = \prod_{i=1}^m p(x_i;\theta)$
 

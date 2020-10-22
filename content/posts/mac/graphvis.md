@@ -23,7 +23,7 @@ a->c
 
 And then you need to save it as `demo.gv`. Next, run the code 
 ```
-	dot -Tpng demo.gv demo.png
+	dot -Tpng demo.gv > demo.png
 ```
 
 You could get the following pic. 
@@ -65,6 +65,7 @@ You could define the node in the beginning and then refer it in the following pa
 |image|image filename|
 |shape|[ref](http://www.graphviz.org/doc/info/shapes.html)
 |width|.75 inch|
+
 ## Principal Graph Attributes
 Here I just want to mention `rank`.
 
@@ -72,6 +73,7 @@ Using the following code we could get multiple node in the same level.
 
 ```
 digraph G {
+     A [label="Teacher"],
     A -> B,
     A -> C,
     C -> D,
@@ -82,6 +84,7 @@ digraph G {
 ```
 <img src='https://g.gravizo.com/svg?
 digraph G { 
+    A [label="Teacher"],
   A -> B,
     A -> C,
     C -> D,
@@ -90,6 +93,8 @@ digraph G {
     {rank = same; B; D; Y;},
 }
 '/>
+
+There is also one could change direction of graph. `rankdir=LR;`
 
 # Flow chart
 

@@ -2,8 +2,8 @@
 title: "Decision Tree"
 date: "2018-05-08"
 description: "Basic idea for decision tree"
-categories:
-    - "Machine learning"
+categories: 
+- "Machine learning"
 ---
 
 

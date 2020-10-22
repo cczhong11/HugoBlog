@@ -2,10 +2,10 @@
 title: "My first blog"
 date: "2018-03-27"
 description: "This is my first blog in my github home page."
-categories:
-    - "note"
-    - "other"
-    - "idea"
+categories: 
+- "note"
+-  "other"
+-  "idea"
 ---
 # Hello World
 

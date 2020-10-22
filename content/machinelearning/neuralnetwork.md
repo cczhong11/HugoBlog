@@ -7,6 +7,7 @@ categories:
 ---
 
 # Neural network
+
 The key difference is it combines non-linear function with linear function. It could implement any function by using enough neural.
 
 Before, we could learn $h_\theta(x)=\theta^T\phi(x)$, if we still set $\phi(x)$ to be a linear function, which we think it should be a two-stage function, but in the end it is still a one stage linear function.
@@ -22,12 +23,14 @@ A neural network will a single hidden layers (and enough hidden units) is a univ
 
 In practice, not that relevant (similar to how polynomials can fit any function), and the more important aspect is that they appear to work very well in practice for many domains
 
-The hypothesis $h_\theta(x)$ is not a convex function of parameters \theta={W_i,b_i}, so we have possibility of local optima
+The hypothesis $h_\theta(x)$ is not a convex function of parameters $\theta={W_i,b_i}$, so we have possibility of local optima
 
 Architectural choices (how many layers, how they are connected, etc), become important algorithmic design choices (i.e. hyperparameters)
 
 “Deep learning” refers (almost always) to machine learning using neural network models with multiple hidden layers
+
 ## optimization
+
 Key challenge for neural networks: often have very large number of samples, computing gradients can be computationally intensive.
 
 Alternative approach, stochastic gradient descent (SGD): adjust
