@@ -1,3 +1,11 @@
+---
+title: "SQL basics"
+date: "2018-12-15"
+description: "An introduction to SQL"
+categories:
+    - "db"
+---
+
 # Introduction to SQL 
 
 SQL is a very important language we used in Relational Database management system. Writing efficient SQL query can help us do lots of things. 
@@ -51,3 +59,59 @@ Union generates a relation that contains all tuples that appear in either only o
 
 ### PRODUCT/JOIN
 
+The product will generate a relation that contains all possible combinations of tuples from the input relations. If we had M relations in table R and N relations in table S, we will have M*N results after the PRODUCT.
+
+JOIN is to generate a relation that contains all tuples that are a combination of two tuples. There are also some other various kind of JOIN. Inner JOIN is the same as JOIN.
+
+LEFT JOIN returns all records from the left table (table1), and the matched records from the right table (table2).
+
+OUTER JOIN return all records when there is a match in either left (table1) or right (table2) table records.
+
+```SQL
+SELECT * from table1 INNER/LEFT/OUTER JOIN table2 on table1.attr1 = table2.attr2
+```
+
+## Advanced SQL
+### Aggregations + Group By
+
+There are many aggregate functions, including the following operations:
+
+-  AVG(col) Return the average col value.  
+-  MIN(col) Return minimum col value.  
+-  MAX(col) Return maximum col value.  
+-  SUM(col) Return sum of values in col.  
+-  COUNT(col) Return # of values for col.
+ 
+ We could also use DISTINCT keyword for COUNT, SUM, AVG.
+ 
+ If we want to get aggregate results based on different groups, we can use `group by` to calculate aggregates against each subset. 
+ 
+ If we want to filter the result based on aggregation computation, we can use `HAVING attr > x` after `group by`.
+ 
+### OUTPUT control
+
+For output redirection, we can use `INTO table` to store query result to another table. Or `CREATE TABLE A (select ....)` can do the same thing.
+
+In order to get ORDER result, we can use `ORDER BY COL` and use `ASC|DESC` to control the order. 
+
+We can also use `LIMIT` keyword to control the offset for output.
+
+### Nested Queries
+
+We can also use a query inside a clause. For example, we can put  a select query after WHERE. `select a from b where x in (select x from...)`. Here there are 4 operators we can use.
+
+- ALL→ Must satisfy expression for all rows in subquery
+- ANY→ Must satisfy expression for at least one row in sub-query.
+- IN→ Equivalent to '=ANY()' . 
+- EXISTS→ At least one row is returned.
+
+### Common Table Expressions
+
+We can use this as a temporary table. 
+
+```sql
+WITH cteSource (maxId) AS ( SELECT MAX(sid) FROM enrolled
+),
+X(Y) AS (SELECT ....)
+SELECT name FROM student, cteSource WHERE student.sid = cteSource.maxId
+```

@@ -9,6 +9,10 @@ disqusShortname = "tczhong"
 googleAnalytics = ""
 enableRobotsTXT = true
 
+[author]
+    name = "cczhong11"
+    homepage = "https://cczhong11.github.io"
+
 ## Site Settings
 [params]
     author = "Tc Zhong"

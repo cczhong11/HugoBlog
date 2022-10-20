@@ -1,3 +1,11 @@
+---
+title: "Network Layers"
+date: "2018-11-10"
+description: "This blog will tell you about network layer."
+categories:
+    - "Network"
+---
+
 # Network Layers
 
 In the network, there are two main parts, one is network edge, the other is network core. The network edge is end system, which running applications. The network core is routers and interconnected network. 
