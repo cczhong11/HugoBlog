@@ -1,5 +1,5 @@
 ---
-title: "Fix the strong problem when fetch s3 object"
+title: "Fix the strange problem when fetch s3 object"
 date: "2021-08-14"
 description: "This blog will introduce how to fix the utf-8 encoding file in s3 problem"
 categories:

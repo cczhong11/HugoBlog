@@ -1,5 +1,5 @@
 ## Basic Configuration
-baseurl = "http://www.tczhong.com/"
+baseurl = "https://www.tczhong.com/"
 languageCode = "en"
 canonifyurls = "true"
 theme = "hyde-hyde"
